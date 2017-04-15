@@ -1,19 +1,19 @@
 while str = gets and str != nil do
-  array = []; answer = 'correct'
+  stack = []; answer = 'correct'
 
   str.each_char do |c|
     if c == '('
-      array.push(1)
+      stack.push(1)
     elsif c == ')'
-      if array.size > 0
-        array.pop
+      if !stack.empty?
+        stack.pop
       else
         answer = 'incorrect'
       end
     end
   end
 
-  answer = 'incorrect' if array.size > 0
+  answer = 'incorrect' if !stack.empty?
 
   puts answer
 end
