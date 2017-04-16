@@ -12,5 +12,5 @@ for c in 1..(gets.to_i)
     spent += dict[t.first] * t.last.to_i
   end
 
-  puts "R$ #{'%.2f' % spent.round(2)}"
+  puts "R$ #{'%.2f' % spent}"
 end
